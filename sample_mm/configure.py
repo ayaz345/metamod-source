@@ -12,7 +12,7 @@ except:
   sys.exit(1)
 
 def make_objdir_name(p):
-    return 'obj-' + util.Platform() + '-' + p.target_arch
+  return f'obj-{util.Platform()}-{p.target_arch}'
 
 parser = run.BuildParser(sourcePath=sys.path[0], api='2.1')
 parser.default_arch = 'x86'
